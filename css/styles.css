@@ -1,0 +1,80 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.centered {
+    text-align: center;
+}
+
+form {
+    width: fit-content;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 50px;
+    border: black dotted;
+}
+
+select, input {
+    float: right;
+    margin: 5px;
+}
+
+label {
+    float: left;
+    clear: both;
+    padding-right:10px;
+    margin: 5px;
+}
+
+#or {
+    width: inherit;
+}
+
+#form-buttons {
+    clear: both;
+    width: fit-content;
+    margin: auto;
+}
+
+#header {
+    background-color:#ffcd00;
+    padding: 5px;
+}
+
+table, tr {
+    margin: auto;
+    border-collapse: collapse;
+    border: black thin;
+    width: 50%;
+}
+
+th {
+    background-color:#ffcd00;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    padding: 5px;
+}
+
+.state-field {
+    text-align: center;
+}
+
+#school-name-field {
+    text-align: left;
+}
+
+.course-table {
+    clear: right;
+    width: 90%;
+}
+
+.show-selected {
+    float: right;
+    margin-right: 5%;
+}

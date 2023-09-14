@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <div class="centered">
+            <h1>Transferrable Courses at ABC College</h1>
+        </div>
+        <button class="show-selected">Show Selected</button> <!-- should pop up a summary of credits earned from transfer courses -->
+        <table class="course-table">
+            <thead>
+                <tr> <!-- databases has taught me that these could be combined into 2 composite fields for the view -->
+                    <th>Course Name</th>
+                    <th>Course Code</th>
+                    <th>Centre Equivalent Course Name or Credit</th>
+                    <th>Centre Equivalent Course Code</th>
+                    <th>Additional Notes</th>
+                    <th><input type="checkbox"></th> <!-- this is a checkbox that could select all for some strange reason if need be -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Introduction to Computer Science</td>
+                    <td>CS 101</td>
+                    <td>Programming and Problem Solving</td>
+                    <td>CSC 170</td>
+                    <td><i>Example note.</i></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+                <tr>
+                    <td>Exploratory Humanities</td>
+                    <td>HUM 100</td>
+                    <td>General Elective Credit</td>
+                    <td>3</td>
+                    <td><i>Does not replace class, but fills elective credits.</i></td>
+                    <td><input type="checkbox"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

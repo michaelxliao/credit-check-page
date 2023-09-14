@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <!--
+            User Stories:
+            - incoming student with dual credit courses in their community college
+            - office of registrar worker who needs to check what courses are transferrable
+            - tech illiterate parent who wants to help their kid
+            - transfer student who wants to see what credit they've earned
+
+            Objectives:
+            - serve incoming/transfer students to self-search for course credit
+            - submit self-selected courses for approval (need to include name, etc.)
+            - max 23 credits can be transferred
+            - request to add credits to the database
+        -->
+    </head>
+    <body>
+        <div id="header" class="centered">
+            <h1>Transfer Credits</h1>
+        </div>
+        <p>Info here: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
+            in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <!-- Opinion: It is best to offer a search function at the top (most accessible)
+            to locate the particular school the user is wanting and then displaying a
+            smaller view of the table of all courses for them to browse and pick through.
+            
+            Ideally we can implement live updates that restrict the options available in
+            the dropdowns as someone fills out the first fields. This would require some
+            js I imagine.
+            
+            e.g. if I choose United States, a State field appears, and when I choose the
+            State, the list of schools is limited to only the ones in that state, etc.-->
+
+        <form id="school-search">
+            <label for="institution-name">Enter college name:</label>
+            <input type="text" id="institution-name" name="institution-name" placeholder="Centre College, Danville KY"> <!-- easiest for user would be to implement a solution that suggests colleges as the name is typed-->
+            
+            <br>
+            <br>
+            <p class="centered">- OR -</p>
+            <br>
+            
+            <label for="country">Country:</label>
+            <select id="country" name="country"> <!-- not actually necessary if we do not have transfer students from abroad -->
+                <option hidden>Select one</option>
+                <option value="United States">United States</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="...">...</option>
+            </select>
+            
+            <br>
+            
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option hidden>Select one</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="...">...</option>
+            </select>
+
+            <br>
+            
+            <label for="school-name">School name:</label>
+            <select id="school-name" name="school-name">
+                <option hidden>Select one</option>
+                <option value="ABC College">ABC College</option>
+                <option value="Abilene Christian University">Abilene Christian University</option>
+                <option value="Adelphi University">Adelphi University</option>
+                <option value="...">...</option>
+            </select>
+
+            <div id="form-buttons">
+                <button type="submit">Search</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th id="school-name-field">School Name</th>
+                    <th>State</th> <!-- i find city to be a poor way to filter through schools. dealer's choice though -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="colleges/abc-college.html">ABC College</a></td> <!-- if using d3 + tooltip js, can make this appear-->
+                    <td class="state-field">KY</td>
+                </tr>
+                <tr>
+                    <td><a href="colleges/abilene-christian-university.html">Abilene Christian University</a></td> <!-- if using d3 + tooltip js, can make this appear-->
+                    <td class="state-field">TX</td>
+                </tr>
+                <tr>
+                    <td><a href="colleges/adelphi-university.html">Adelphi University</a></td> <!-- if using d3 + tooltip js, can make this appear-->
+                    <td class="state-field">NY</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
